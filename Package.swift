@@ -1,19 +1,19 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 import PackageDescription
 import Foundation
 
 let package = Package(
     name: "SourceDocs",
     platforms: [
-        .macOS(.v10_15)
+        .macOS(.v12)
     ],
     products: [
         .executable(name: "sourcedocs", targets: ["SourceDocsCLI"]),
         .library(name: "SourceDocsLib", targets: ["SourceDocsLib"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
-        .package(url: "https://github.com/jpsim/SourceKitten.git", from: "0.29.0"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.5.0"),
+        .package(url: "https://github.com/SimplyDanny/SourceKitten.git", branch: "update-xcode"),
         .package(url: "https://github.com/eneko/MarkdownGenerator.git", from: "0.4.0"),
         .package(url: "https://github.com/onevcat/Rainbow", from: "3.0.0"),
         .package(url: "https://github.com/eneko/ProcessRunner.git", from: "1.1.0")
